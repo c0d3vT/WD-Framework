@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#!/bin/bash
+
 read -p "[+] Enter LHOST : " LHOST
 read -p "[+] Enter LPORT : " LPORT
 

