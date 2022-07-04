@@ -17,4 +17,4 @@ there will be all of the team projects .
 
 [Youtube Channel](https://www.youtube.com/channel/UC53zc30ESpYtWnJXA7_hEZg)
 
-E-mail : `wdevil-Team@hotmail.com
+E-mail : wdevil-Team@hotmail.com
