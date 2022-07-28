@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+	body {
+		background-image: url("background.jpg");
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		font-family: monospace;
+		color: white;
+		text-shadow: 1px 2px black;
+		word-wrap: break-word;
+	}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0; 
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+  text-shadow: none;
+}
+
+article {
+  margin-top: 70px;
+  text-transform: capitalize;
+}
+
+.cons {
+	background-color: black;
+	margin-right: 20%;
+	margin-left: 20%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	padding: 6px;
+	text-transform: none;
+	color: lime;
+	opacity: .9;
+}
+
+</style>
+</head>
+<body>
+<header>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="tutorial.html">Tutorials</a>
+  <a href="help.html">Help</a>
+</div>
+
+</header>
+<article>
+<p>Usage: nmap [Scan Type(s)] [Options] [target specification]<br></p>
+<div class="cons">
+	<h4>HOST DISCOVERY:</h4>
+  nmap -sL [Target] : List Scan - simply list targets to scan<br>
+  nmap -sn [Target] : Ping Scan - disable port scan<br>
+  nmap -Pn [Target] : Treat all hosts as online -- skip host discovery<br>
+<h4>PORT SPECIFICATION AND SCAN ORDER:</h4>
+ nmap -p [port ranges] [Target] : Only scan specified ports<br>
+    Ex: -p22; -p1-65535; -p U:53,111,137,T:21-25,80,139,8080,S:9<br>
+<h4>SERVICE/VERSION DETECTION:</h4>
+  nmap -sV [Target]<br>
+<h4>SCRIPT SCAN:</h4>
+  nmap -sC [Target]<br>
+<h4>OS DETECTION:</h4>
+  sudo nmap -O [Target]<br>
+<h4>OUTPUT:</h4>
+  nmap [Target] -oN outputfile<br>
+<h4>EXAMPLES:</h4>
+  nmap -v -A scanme.nmap.org<br>
+  nmap -v -sn 192.168.0.0/16 10.0.0.0/8<br>
+  nmap -v -iR 10000 -Pn -p 80<br>
+  nmap -sC -vvv -sV [Target]
+</div> 
+Src : <a href="https://nmap.org/book/man.html">Nmap Man Page</a>
+</article>
+<footer>
+</footer>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
